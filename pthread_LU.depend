@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1557245114 source:c:\users\frank lee\codeblocksproject\pthread_lu\main.cpp
+	<iostream>
+	<pthread.h>
+	<windows.h>
+	<cstdlib>
+	<iomanip>
+	<algorithm>
+	<x86intrin.h>
+	<fstream>
+	<time.h>
+
