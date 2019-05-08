@@ -1,5 +1,6 @@
 #include <iostream>
 #include <pthread.h>
+#include <semaphore.h>
 #include <windows.h>
 #include <cstdlib>  // 用来产生随机数
 #include <iomanip>  // 用来格式化输出
@@ -25,9 +26,12 @@ struct Thread_Data {
 	int numThreads;
 } thread_data;
 
+sem_t sem_parent;
+sem_t sem_children;
+
 int main()
 {
-    int N = 5;  // 矩阵的形状为N*N
+    int N = 6;  // 矩阵的形状为N*N
     int numThreads = 8;  // 线程数量
     pthread_t *thread_handle = new pthread_t[numThreads];
     int errcode;
@@ -73,7 +77,7 @@ int main()
     show_matrix(m, N);
 
 
-    for (int k=0; k < N-1; k++){
+    for (int k=0; k < N; k++){
 
         if(0 == Matrix[k][k])  // 如果A(k,k)的位置为0的话，就从后面找一行不为0的互换
         {
@@ -84,17 +88,18 @@ int main()
         }
 
 		thread_data.k = k;  // k代表进行到了第k行
-		for(int j=0; j<N; j++)
+		for(int j=k+1; j<N; j++)
             Matrix[k][j] = Matrix[k][j]/Matrix[k][k];
         Matrix[k][k] = 1.0;
 
-		for (int thread_index = 0; thread_index < numThreads; thread_index++){
-			pthread_create(&thread_handle[thread_index], NULL, eliminate_lu, (void*)&index[thread_index]);
+		for(int i=0; i<numThreads; i++){
+			pthread_create(&thread_handle[i], NULL, eliminate_lu, (void*)&index[i]);
 		}
 
-		for (int thread_index = 0; thread_index < numThreads; thread_index++){
-			pthread_join(thread_handle[thread_index], NULL);
+		for(int i=0; i<numThreads; i++){
+			pthread_join(thread_handle[i], NULL);
 		}
+
 	}
 
 	show_matrix(Matrix, N);
@@ -225,5 +230,9 @@ void *eliminate_lu(void *threadarg)
 		}
 		Matrix[i][k] = 0;
 	}
+//	sem_wait(&sem_children);
 }
+
+
+void test(int N, int numThreads)
 

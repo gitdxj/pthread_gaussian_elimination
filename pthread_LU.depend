@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1557245114 source:c:\users\frank lee\codeblocksproject\pthread_lu\main.cpp
+1557312973 source:c:\users\frank lee\codeblocksproject\pthread_lu\main.cpp
 	<iostream>
 	<pthread.h>
+	<semaphore.h>
 	<windows.h>
 	<cstdlib>
 	<iomanip>
