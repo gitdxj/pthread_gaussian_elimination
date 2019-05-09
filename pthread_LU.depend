@@ -1,13 +1,27 @@
 # depslib dependency file v1.0
-1557312973 source:c:\users\frank lee\codeblocksproject\pthread_lu\main.cpp
+1557368736 source:c:\users\frank lee\codeblocksproject\pthread_lu\main.cpp
+	<iostream>
+	"matrix.h"
+	"pthread_lu.h"
+
+1557324886 c:\users\frank lee\codeblocksproject\pthread_lu\matrix.h
+	<iostream>
+	<cstdlib>
+	<iomanip>
+	<algorithm>
+	<time.h>
+
+1557322727 source:c:\users\frank lee\codeblocksproject\pthread_lu\matrix.cpp
+	"matrix.h"
+
+1557323921 c:\users\frank lee\codeblocksproject\pthread_lu\pthread_lu.h
 	<iostream>
 	<pthread.h>
 	<semaphore.h>
 	<windows.h>
-	<cstdlib>
-	<iomanip>
-	<algorithm>
 	<x86intrin.h>
-	<fstream>
-	<time.h>
+	"matrix.h"
+
+1557324766 source:c:\users\frank lee\codeblocksproject\pthread_lu\pthread_lu.cpp
+	"pthread_lu.h"
 
