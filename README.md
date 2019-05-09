@@ -1,1 +1,3 @@
 # pthread_gaussian_elimination
+matrix.h和对应的cpp中包含一些常用的方阵操作，如初始化、向控制台打印矩阵等  
+pthread_lu.h中是使用pthread进行lu高斯消去法，还有许多其他测试算法性能的test方法

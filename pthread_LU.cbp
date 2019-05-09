@@ -33,6 +33,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="main.cpp" />
+		<Unit filename="matrix.cpp" />
+		<Unit filename="matrix.h" />
+		<Unit filename="pthread_lu.cpp" />
+		<Unit filename="pthread_lu.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

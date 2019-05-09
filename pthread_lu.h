@@ -19,7 +19,12 @@ typedef struct Thread_Data {
 
 void *eliminate_lu(void *threadarg);
 void *eliminate_std(void *threadarg);
+void *eliminate_lu_sse(void *threadarg);
+void *eliminate_lu_avx(void *threadarg);
 void test_std(int N, int numThreads, long long& time_interval);
+void test_lu_sinthread(int N, long long& time_interval);
 void test_lu(int N, int numThreads, long long& time_interval);
+void test_lu_sse(int N, int numThreads, long long& time_interval);
+void test_lu_avx(int N, int numThreads, long long& time_interval);
 
 #endif // PTHREAD_LU_H_INCLUDED
