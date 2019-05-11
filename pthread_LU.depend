@@ -27,3 +27,59 @@
 1557385017 source:c:\users\frank lee\codeblocksproject\pthread_lu\pthread_lu.cpp
 	"pthread_lu.h"
 
+1557485658 source:c:\users\nklib\desktop\pthread_lu\main.cpp
+	<iostream>
+	<fstream>
+	"matrix.h"
+	"pthread_lu.h"
+
+1557326750 c:\users\nklib\desktop\pthread_lu\matrix.h
+	<iostream>
+	<cstdlib>
+	<iomanip>
+	<algorithm>
+	<time.h>
+	<x86intrin.h>
+
+1557483122 c:\users\nklib\desktop\pthread_lu\pthread_lu.h
+	<iostream>
+	<pthread.h>
+	<semaphore.h>
+	<windows.h>
+	<x86intrin.h>
+	"matrix.h"
+
+1557326730 source:c:\users\nklib\desktop\pthread_lu\matrix.cpp
+	"matrix.h"
+
+1557485446 source:c:\users\nklib\desktop\pthread_lu\pthread_lu.cpp
+	"pthread_lu.h"
+
+1557547797 source:c:\users\frank lee\desktop\pthread_lu\main.cpp
+	<iostream>
+	<fstream>
+	"matrix.h"
+	"pthread_lu.h"
+
+1557384350 c:\users\frank lee\desktop\pthread_lu\matrix.h
+	<iostream>
+	<cstdlib>
+	<iomanip>
+	<algorithm>
+	<time.h>
+	<x86intrin.h>
+
+1557540724 c:\users\frank lee\desktop\pthread_lu\pthread_lu.h
+	<iostream>
+	<pthread.h>
+	<semaphore.h>
+	<windows.h>
+	<x86intrin.h>
+	"matrix.h"
+
+1557547286 source:c:\users\frank lee\desktop\pthread_lu\matrix.cpp
+	"matrix.h"
+
+1557544444 source:c:\users\frank lee\desktop\pthread_lu\pthread_lu.cpp
+	"pthread_lu.h"
+
